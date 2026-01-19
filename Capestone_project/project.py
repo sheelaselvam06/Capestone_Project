@@ -11,10 +11,10 @@ from langchain_community.document_loaders import PyPDFLoader
 
 
 load_dotenv()
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 
-pdf_path = "ProjectData.pdf"   # ensure this file is in your project folder
+pdf_path = "/Capestone_Project/projectData.pdf"   # ensure this file is in your project folder
 loader = PyPDFLoader(pdf_path)
 documents = loader.load()
 
